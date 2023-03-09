@@ -1,0 +1,17 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int trailingZeros(int n){
+    int res=0, powerOf5 = 5;
+    while(n >= powerOf5){
+        res = res + (n/powerOf5);
+        powerOf5 = powerOf5 * 5;
+    }
+    return res;
+}
+
+int main(){
+    int n;  cin >> n;
+    cout<< trailingZeros(n) << endl;
+    return 0;
+}
